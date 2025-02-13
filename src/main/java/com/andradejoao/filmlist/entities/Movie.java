@@ -1,4 +1,4 @@
-package com.andradejoao.filmlist;
+package com.andradejoao.filmlist.entities;
 import java.util.Objects;
 
 import jakarta.persistence.Column;
@@ -23,7 +23,7 @@ public class Movie {
     private String platforms;
     private double score;
     private String imgUrl;
-    
+
     @Column(columnDefinition = "TEXT")
     private String shortDescription;
 
