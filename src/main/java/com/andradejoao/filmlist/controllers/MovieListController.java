@@ -8,24 +8,29 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.andradejoao.filmlist.dto.MovieDTO;
+import com.andradejoao.filmlist.dto.MovieListDTO;
 import com.andradejoao.filmlist.dto.MovieMinDTO;
+import com.andradejoao.filmlist.services.MovieListService;
 import com.andradejoao.filmlist.services.MovieService;
 
 @RestController
-@RequestMapping(value = "/movies")
-public class MovieController {
+@RequestMapping(value = "/lists")
+public class MovieListController {
+
+    @Autowired
+    private MovieListService movieListService;
 
     @Autowired
     private MovieService movieService;
 
-    @GetMapping(value = "/{id}")
-    public MovieDTO findAll(@PathVariable Long id) {
-        return movieService.findById(id);
+    @GetMapping
+    public List<MovieListDTO> findAll() {
+        return movieListService.findAll();
     }
 
-    @GetMapping
-    public List<MovieMinDTO> findAll() {
-        return movieService.findAll();
+    @GetMapping(value = "/{listId}/movies")
+    public List<MovieMinDTO> findByList(@PathVariable Long listId) {
+        var result = movieService.findByList(listId);
+        return result;
     }
 }

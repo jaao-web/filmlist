@@ -1,6 +1,7 @@
 package com.andradejoao.filmlist.dto;
 
 import com.andradejoao.filmlist.entities.Movie;
+import com.andradejoao.filmlist.projections.MovieMinProjection;
 
 public class MovieMinDTO {
 
@@ -19,9 +20,16 @@ public class MovieMinDTO {
         title = entity.getTitle();
         year = entity.getYear();
         imgUrl = entity.getImgUrl();
-        shortDescription = entity.getShotDescription();
+        shortDescription = entity.getShortDescription();
     }
 
+    public MovieMinDTO(MovieMinProjection projection) {
+        id = projection.getId();
+        title = projection.getTitle();
+        year = projection.getYear();
+        imgUrl = projection.getImgUrl();
+        shortDescription = projection.getShortDescription();
+    }
 
     public Long getId() {
         return this.id;
