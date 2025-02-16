@@ -11,7 +11,10 @@ import com.andradejoao.filmlist.projections.MovieMinProjection;
 public interface MovieRepository extends JpaRepository<Movie, Long> {
 
     @Query(nativeQuery = true, value = """
-            SELECT tb_movie.id, tb_movie.title, tb_movie.movie_year AS `year`, tb_movie.img_url AS imgUrl,
+            SELECT tb_movie.id, 
+            tb_movie.title, 
+            tb_movie.movie_year AS `year`, 
+            tb_movie.img_url AS imgUrl,
             tb_movie.short_description AS shortDescription, tb_belonging.position
             FROM tb_movie
             INNER JOIN tb_belonging ON tb_movie.id = tb_belonging.movie_id
