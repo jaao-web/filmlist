@@ -13,7 +13,7 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
     @Query(nativeQuery = true, value = """
             SELECT tb_movie.id, 
             tb_movie.title, 
-            tb_movie.movie_year AS `year`, 
+            tb_movie.movie_year AS movieYear, 
             tb_movie.img_url AS imgUrl,
             tb_movie.short_description AS shortDescription, tb_belonging.position
             FROM tb_movie
