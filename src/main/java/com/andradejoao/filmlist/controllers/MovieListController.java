@@ -5,11 +5,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.andradejoao.filmlist.dto.MovieListDTO;
 import com.andradejoao.filmlist.dto.MovieMinDTO;
+import com.andradejoao.filmlist.dto.ReplacementDTO;
 import com.andradejoao.filmlist.services.MovieListService;
 import com.andradejoao.filmlist.services.MovieService;
 
@@ -32,5 +35,10 @@ public class MovieListController {
     public List<MovieMinDTO> findByList(@PathVariable Long listId) {
         var result = movieService.findByList(listId);
         return result;
+    }
+
+    @PostMapping(value = "/{listId}/replacement")
+    public void move(@PathVariable Long listId, @RequestBody ReplacementDTO body) {
+        movieListService.move(listId, body.getSouceIndex(), body.getDestinationIndex());
     }
 }
