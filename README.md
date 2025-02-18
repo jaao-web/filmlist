@@ -1,6 +1,3 @@
-# filmlist
-Com base nas informações fornecidas e na estrutura típica de projetos Spring Boot, aqui está um exemplo de `README.md` para o seu projeto "filmlist":
-
 # Filmlist
 
 Filmlist é uma aplicação backend desenvolvida em Java com Spring Boot que gerencia listas de filmes categorizados por gênero. A aplicação permite listar filmes por gênero, alterar a ordem dos filmes dentro de cada lista e persistir essas alterações em um banco de dados.
