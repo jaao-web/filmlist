@@ -11,7 +11,7 @@ Filmlist é uma aplicação backend desenvolvida em Java com Spring Boot que ger
 
 ## Modelo de domínio DSList
 
-![Alt text](https://imgur.com/0XKHpAB "a title")
+![filmlist drawio](https://github.com/user-attachments/assets/044a19d2-a0c4-4b07-9c1e-d0b88c6ddf76)
 
 ## Funcionalidades
 
