@@ -20,34 +20,6 @@ Filmlist é uma aplicação backend desenvolvida em Java com Spring Boot que ger
 - **Persistência de Dados**: Utilização do Spring Data JPA para interagir com o banco de dados e gerenciar a persistência das informações.
 - **Arquitetura em Camadas**: Implementação de uma estrutura organizada em camadas (Controller, Service, Repository) para promover a separação de responsabilidades e facilitar a manutenção do código.
 
-## Como Executar o Projeto
-
-1. **Pré-requisitos**:
-   - Java 8 ou superior instalado.
-   - Maven instalado.
-
-2. **Clonar o Repositório**:
-   ```bash
-   git clone https://github.com/jaao-web/filmlist.git
-   ```
-
-3. **Navegar até o Diretório do Projeto**:
-   ```bash
-   cd filmlist
-   ```
-
-4. **Construir o Projeto**:
-   ```bash
-   mvn clean install
-   ```
-
-5. **Executar a Aplicação**:
-   ```bash
-   mvn spring-boot:run
-   ```
-
-Após a execução, a aplicação estará disponível em `http://localhost:8080/`.
-
 ## Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
@@ -55,7 +27,3 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar
 ## Licença
 
 Este projeto está licenciado sob a licença MIT. Consulte o arquivo `LICENSE` para obter mais informações.
-
----
-
-Para obter mais detalhes sobre a implementação e funcionalidades específicas, recomenda-se consultar o código-fonte e a documentação associada no repositório. 
